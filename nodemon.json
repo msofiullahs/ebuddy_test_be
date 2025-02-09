@@ -1,0 +1,6 @@
+{
+  "watch": ["config", "controller", "core", "entities", "middleware", "repository", "routes"],
+  "ext": "ts",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "ts-node ./core/app.ts"
+}
