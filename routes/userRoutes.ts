@@ -1,11 +1,12 @@
 import express, { Express, Request, Response, Router } from "express";
 import bodyParser from "body-parser";
-import { getUsers } from "../controller/api";
+import { getUsers, updateUser } from "../controller/api";
 
 const userRouter = Router();
 userRouter.use(bodyParser.json());
 
 userRouter.get('/', getUsers);
+userRouter.put('/', updateUser);
 
 // userRoutes.post('/data', (req : any, res : any)=>{
 //     db.settings({

@@ -6,7 +6,7 @@ interface UserData {
   username: string,
   numberOfRents: number,
   totalAverageWeightRatings: number,
-  recentlyActive: number,
+  recentlyActive: Date,
   password: string,
 }
 
@@ -20,7 +20,7 @@ export class User implements UserData {
   username: string;
   numberOfRents: number;
   totalAverageWeightRatings: number;
-  recentlyActive: number;
+  recentlyActive: Date;
   password: string;
 
   constructor({

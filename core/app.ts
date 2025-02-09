@@ -2,11 +2,12 @@ import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import { json } from "body-parser";
 import userRouter from "../routes/userRoutes";
+import checkToken from "../middleware/authMiddleware";
 
 const app = express();
 app.use(cors());
 app.use(json());
-app.use('/user', userRouter);
+app.use('/user', checkToken, userRouter);
 
 app.get('/', (req: Request, res: Response)=>{
     res.send('<h1>Express & Firestore</h1>')
